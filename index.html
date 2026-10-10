@@ -1,0 +1,1915 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>كرم الشام | Karam El Sham</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --red:#d71920;
+    --dark:#101010;
+    --dark2:#181818;
+    --cream:#fff8ef;
+    --gold:#f4bd38;
+    --gray:#777;
+    --white:#fff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Cairo",sans-serif;
+    background:#fff;
+    color:#151515;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* TOP BAR */
+
+.topbar{
+    background:var(--dark);
+    color:white;
+    text-align:center;
+    padding:8px;
+    font-size:13px;
+}
+
+.topbar span{
+    color:var(--gold);
+    font-weight:900;
+}
+
+/* NAVBAR */
+
+.navbar{
+    height:75px;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 6%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 20px #00000015;
+}
+
+.logo{
+    color:var(--red);
+    font-size:25px;
+    font-weight:900;
+    line-height:1;
+}
+
+.logo small{
+    display:block;
+    color:#222;
+    font-size:8px;
+    letter-spacing:4px;
+    margin-top:5px;
+}
+
+.nav-links{
+    display:flex;
+    gap:27px;
+    font-size:14px;
+    font-weight:800;
+}
+
+.nav-links a:hover{
+    color:var(--red);
+}
+
+.nav-actions{
+    display:flex;
+    gap:8px;
+}
+
+.icon-btn{
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:#111;
+    color:white;
+    cursor:pointer;
+    font-size:17px;
+}
+
+.cart-btn{
+    border:none;
+    background:var(--red);
+    color:white;
+    padding:10px 17px;
+    border-radius:30px;
+    font-weight:900;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    color:white;
+    padding:70px 7%;
+    background:
+    linear-gradient(90deg,#000e 0%,#0008 45%,#0002),
+    url("https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=1800&q=90")
+    center/cover;
+}
+
+.hero-content{
+    max-width:720px;
+}
+
+.hero-badge{
+    display:inline-block;
+    border:1px solid #ffffff55;
+    background:#ffffff15;
+    backdrop-filter:blur(8px);
+    padding:8px 18px;
+    border-radius:30px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(48px,7vw,88px);
+    line-height:1;
+    font-weight:900;
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero p{
+    margin:25px 0;
+    color:#eee;
+    font-size:18px;
+    line-height:1.9;
+    max-width:620px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    border:none;
+    padding:14px 25px;
+    border-radius:9px;
+    font-weight:900;
+    cursor:pointer;
+}
+
+.btn-red{
+    background:var(--red);
+    color:white;
+}
+
+.btn-white{
+    background:white;
+    color:#111;
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    background:#111;
+    color:white;
+}
+
+.feature{
+    text-align:center;
+    padding:24px;
+    border-left:1px solid #ffffff15;
+}
+
+.feature-icon{
+    font-size:25px;
+}
+
+.feature h3{
+    font-size:16px;
+}
+
+.feature p{
+    color:#999;
+    font-size:12px;
+}
+
+/* GENERAL */
+
+section{
+    padding:80px 6%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title .red{
+    color:var(--red);
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.section-title h2{
+    font-size:40px;
+    font-weight:900;
+}
+
+.section-title p{
+    color:var(--gray);
+}
+
+/* CATEGORIES */
+
+.categories{
+    background:var(--cream);
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:15px;
+}
+
+.category{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 25px #0000000c;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.category:hover{
+    transform:translateY(-7px);
+}
+
+.category img{
+    width:100%;
+    height:130px;
+    object-fit:cover;
+}
+
+.category h3{
+    padding:12px;
+    text-align:center;
+    font-size:14px;
+}
+
+/* FILTERS */
+
+.filters{
+    display:flex;
+    justify-content:center;
+    gap:9px;
+    flex-wrap:wrap;
+    margin-bottom:35px;
+}
+
+.filter{
+    background:white;
+    border:1px solid #ddd;
+    border-radius:30px;
+    padding:9px 18px;
+    cursor:pointer;
+    font-weight:800;
+}
+
+.filter.active,
+.filter:hover{
+    background:var(--red);
+    color:white;
+    border-color:var(--red);
+}
+
+/* PRODUCTS */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.product{
+    background:white;
+    border:1px solid #eee;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 35px #0000000c;
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-7px);
+    box-shadow:0 20px 45px #00000018;
+}
+
+.product-img{
+    height:220px;
+    position:relative;
+    overflow:hidden;
+}
+
+.product-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.product:hover img{
+    transform:scale(1.08);
+}
+
+.product-badge{
+    position:absolute;
+    top:12px;
+    right:12px;
+    background:var(--red);
+    color:white;
+    padding:5px 11px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:900;
+}
+
+.product-info{
+    padding:17px;
+}
+
+.product-info h3{
+    font-size:17px;
+}
+
+.product-info p{
+    color:#888;
+    font-size:12px;
+    min-height:37px;
+    margin:4px 0;
+}
+
+.price{
+    color:var(--red);
+    font-size:20px;
+    font-weight:900;
+    margin:7px 0;
+}
+
+.add-btn{
+    width:100%;
+    border:none;
+    background:#111;
+    color:white;
+    padding:11px;
+    border-radius:9px;
+    font-weight:900;
+    cursor:pointer;
+}
+
+.add-btn:hover{
+    background:var(--red);
+}
+
+/* OFFERS */
+
+.offers{
+    background:var(--cream);
+}
+
+.offer-card{
+    position:relative;
+}
+
+.offer-card .product-img{
+    height:230px;
+}
+
+/* STORY */
+
+.story{
+    background:#111;
+    color:white;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center;
+}
+
+.story img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    border-radius:25px;
+}
+
+.story h2{
+    font-size:42px;
+}
+
+.story p{
+    color:#bbb;
+    line-height:2;
+    margin:20px 0;
+}
+
+.checks{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.check{
+    background:#ffffff0d;
+    padding:13px;
+    border-radius:10px;
+}
+
+/* DELIVERY */
+
+.delivery{
+    background:
+    linear-gradient(#000c,#000c),
+    url("https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+    color:white;
+    text-align:center;
+}
+
+.delivery h2{
+    font-size:45px;
+}
+
+.delivery p{
+    color:#ddd;
+    max-width:650px;
+    margin:10px auto 25px;
+}
+
+.delivery-buttons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.talabat{
+    background:#ff6b00;
+    color:white;
+    padding:14px 28px;
+    border-radius:10px;
+    font-weight:900;
+}
+
+.phone{
+    background:white;
+    color:#111;
+    padding:14px 28px;
+    border-radius:10px;
+    font-weight:900;
+}
+
+/* BRANCHES */
+
+.branches{
+    background:#f7f7f7;
+}
+
+.branch-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:17px;
+}
+
+.branch{
+    background:white;
+    padding:22px;
+    border-radius:16px;
+    border:1px solid #eee;
+}
+
+.branch h3{
+    font-size:18px;
+}
+
+.branch p{
+    color:#777;
+    font-size:13px;
+    margin-top:5px;
+}
+
+/* SOCIAL */
+
+.social{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.social-card{
+    padding:30px;
+    border-radius:20px;
+    color:white;
+    font-size:20px;
+    font-weight:900;
+}
+
+.instagram{
+    background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+}
+
+.facebook{
+    background:#1877f2;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0b0b0b;
+    color:white;
+    padding:55px 6% 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-grid p,
+.footer-grid li{
+    color:#999;
+    margin:8px 0;
+    list-style:none;
+}
+
+.copyright{
+    border-top:1px solid #ffffff15;
+    margin-top:35px;
+    padding-top:20px;
+    text-align:center;
+    color:#666;
+    font-size:12px;
+}
+
+/* CART */
+
+.cart-panel{
+    position:fixed;
+    top:0;
+    left:-420px;
+    width:390px;
+    max-width:92vw;
+    height:100vh;
+    background:white;
+    z-index:2000;
+    box-shadow:5px 0 40px #0003;
+    transition:.35s;
+    padding:20px;
+}
+
+.cart-panel.open{
+    left:0;
+}
+
+.cart-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-bottom:15px;
+    border-bottom:1px solid #eee;
+}
+
+.close{
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:50%;
+    background:#111;
+    color:white;
+    font-size:20px;
+}
+
+.cart-items{
+    height:65vh;
+    overflow:auto;
+    padding:15px 0;
+}
+
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    padding:13px 0;
+    border-bottom:1px solid #eee;
+}
+
+.cart-item small{
+    color:#888;
+}
+
+.remove{
+    border:none;
+    background:none;
+    color:var(--red);
+    font-weight:900;
+}
+
+.total{
+    font-size:23px;
+    font-weight:900;
+}
+
+.checkout{
+    width:100%;
+    border:none;
+    background:var(--red);
+    color:white;
+    padding:14px;
+    border-radius:10px;
+    font-weight:900;
+    margin-top:10px;
+}
+
+/* CHAT BOT */
+
+.chat{
+    position:fixed;
+    left:22px;
+    bottom:22px;
+    z-index:1500;
+}
+
+.chat-button{
+    width:62px;
+    height:62px;
+    border:none;
+    border-radius:50%;
+    background:var(--red);
+    color:white;
+    font-size:25px;
+    box-shadow:0 8px 30px #0004;
+}
+
+.chat-box{
+    display:none;
+    position:absolute;
+    left:0;
+    bottom:75px;
+    width:310px;
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 15px 50px #0004;
+}
+
+.chat-header{
+    background:#111;
+    color:white;
+    padding:16px;
+    font-weight:900;
+}
+
+.chat-body{
+    padding:15px;
+}
+
+.message{
+    background:#f1f1f1;
+    padding:11px;
+    border-radius:12px;
+    margin-bottom:10px;
+    font-size:13px;
+}
+
+.chat-option{
+    width:100%;
+    border:none;
+    background:var(--red);
+    color:white;
+    padding:10px;
+    border-radius:9px;
+    margin-top:6px;
+    font-weight:800;
+}
+
+/* TOAST */
+
+.toast{
+    position:fixed;
+    top:90px;
+    right:20px;
+    background:#111;
+    color:white;
+    padding:13px 20px;
+    border-radius:10px;
+    z-index:3000;
+    transform:translateX(150%);
+    transition:.3s;
+}
+
+.toast.show{
+    transform:translateX(0);
+}
+
+/* LANGUAGE */
+
+.lang{
+    border:none;
+    background:#eee;
+    padding:8px 12px;
+    border-radius:20px;
+    font-weight:900;
+    cursor:pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .category-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .features{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .branch-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .story{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:55px 4%;
+    }
+
+    .hero{
+        min-height:560px;
+        padding:45px 5%;
+    }
+
+    .hero h1{
+        font-size:50px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .category-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .branch-grid,
+    .social,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .story h2{
+        font-size:32px;
+    }
+
+    .delivery h2{
+        font-size:32px;
+    }
+
+    .navbar{
+        padding:0 4%;
+    }
+
+    .logo{
+        font-size:21px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP -->
+
+<div class="topbar">
+🔥 اطلب دلوقتي واستمتع بأشهى الأكلات السورية — <span>الخط الساخن 19509</span>
+</div>
+
+<!-- NAV -->
+
+<nav class="navbar">
+
+<a href="#" class="logo">
+كرم الشام
+<small>KARAM EL SHAM</small>
+</a>
+
+<div class="nav-links">
+<a href="#menu">المنيو</a>
+<a href="#offers">العروض</a>
+<a href="#about">عنّا</a>
+<a href="#branches">الفروع</a>
+<a href="#contact">تواصل</a>
+</div>
+
+<div class="nav-actions">
+
+<button class="lang" onclick="toggleLanguage()">EN</button>
+
+<button class="icon-btn" onclick="toggleChat()">💬</button>
+
+<button class="cart-btn" onclick="toggleCart()">
+🛒 <span id="cartCount">0</span>
+</button>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="hero-content">
+
+<div class="hero-badge">
+🇸🇾 مذاق سوري أصيل
+</div>
+
+<h1>
+كرم الشام
+<br>
+<span>طعم يستاهل الكرم.</span>
+</h1>
+
+<p>
+شاورما، بروستد، ماريا، كريب ومشاوي...
+كل اللي نفسك فيه في مكان واحد.
+اختار أكلك واطلبه وخليه يوصلك لحد باب البيت.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#menu" class="btn btn-red">
+استكشف المنيو ↓
+</a>
+
+<a href="https://www.talabat.com/egypt"
+target="_blank"
+class="btn btn-white">
+🛵 اطلب عبر طلبات
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- FEATURES -->
+
+<div class="features">
+
+<div class="feature">
+<div class="feature-icon">🌯</div>
+<h3>شاورما سورية</h3>
+<p>طعم مميز كل مرة</p>
+</div>
+
+<div class="feature">
+<div class="feature-icon">🔥</div>
+<h3>عروض مميزة</h3>
+<p>اختيارات تناسب الجميع</p>
+</div>
+
+<div class="feature">
+<div class="feature-icon">🚴</div>
+<h3>توصيل</h3>
+<p>لحد باب بيتك</p>
+</div>
+
+<div class="feature">
+<div class="feature-icon">☎️</div>
+<h3>19509</h3>
+<p>الخط الساخن</p>
+</div>
+
+</div>
+
+
+<!-- CATEGORIES -->
+
+<section class="categories">
+
+<div class="section-title">
+<div class="red">DISCOVER</div>
+<h2>اختار مزاجك 😋</h2>
+<p>منيو متنوع لكل الأذواق</p>
+</div>
+
+<div class="category-grid">
+
+<div class="category" onclick="scrollToMenu('shawarma')">
+<img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=700&q=80">
+<h3>🌯 شاورما</h3>
+</div>
+
+<div class="category" onclick="scrollToMenu('maria')">
+<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80">
+<h3>🔥 ماريا</h3>
+</div>
+
+<div class="category" onclick="scrollToMenu('chicken')">
+<img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=700&q=80">
+<h3>🍗 بروستد</h3>
+</div>
+
+<div class="category" onclick="scrollToMenu('crepe')">
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=700&q=80">
+<h3>🌯 كريب</h3>
+</div>
+
+<div class="category" onclick="scrollToMenu('grill')">
+<img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=700&q=80">
+<h3>🍖 مشويات</h3>
+</div>
+
+<div class="category" onclick="scrollToMenu('sides')">
+<img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=700&q=80">
+<h3>🍟 إضافات</h3>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OFFERS -->
+
+<section id="offers" class="offers">
+
+<div class="section-title">
+<div class="red">SPECIAL OFFERS</div>
+<h2>العروض والبوكسات 🔥</h2>
+<p>لمة العيلة والصحاب أحلى مع كرم الشام</p>
+</div>
+
+<div class="products" id="offersGrid"></div>
+
+</section>
+
+
+<!-- MENU -->
+
+<section id="menu">
+
+<div class="section-title">
+<div class="red">OUR MENU</div>
+<h2>منيو كرم الشام</h2>
+<p>اختار أكلك المفضل وأضفه للسلة</p>
+</div>
+
+<div class="filters">
+
+<button class="filter active" onclick="filterMenu('all',this)">
+الكل
+</button>
+
+<button class="filter" onclick="filterMenu('shawarma',this)">
+🌯 شاورما
+</button>
+
+<button class="filter" onclick="filterMenu('maria',this)">
+🔥 ماريا
+</button>
+
+<button class="filter" onclick="filterMenu('chicken',this)">
+🍗 بروستد
+</button>
+
+<button class="filter" onclick="filterMenu('crepe',this)">
+🌯 كريب
+</button>
+
+<button class="filter" onclick="filterMenu('grill',this)">
+🍖 مشويات
+</button>
+
+<button class="filter" onclick="filterMenu('sides',this)">
+🍟 إضافات
+</button>
+
+</div>
+
+<div class="products" id="menuGrid"></div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about" class="story">
+
+<div>
+
+<img
+src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=90"
+alt="Karam El Sham"
+>
+
+</div>
+
+<div>
+
+<div style="color:#d71920;font-weight:900">
+ABOUT KARAM EL SHAM
+</div>
+
+<h2>
+أكل سوري معمول بحب ❤️
+</h2>
+
+<p>
+من الشاورما والماريا للبروستد والمشاوي،
+كرم الشام بيقدم تشكيلة واسعة من الأكلات
+اللي تناسب كل وقت وكل تجمع.
+</p>
+
+<div class="checks">
+
+<div class="check">✓ مكونات طازة</div>
+<div class="check">✓ اختيارات متنوعة</div>
+<div class="check">✓ خدمة توصيل</div>
+<div class="check">✓ طلب أونلاين</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DELIVERY -->
+
+<section class="delivery">
+
+<h2>
+جوعان؟ إحنا جاهزين 🔥
+</h2>
+
+<p>
+اطلب أكلك المفضل من خلال طلبات
+أو اتصل بالخط الساخن،
+وهنوصله لحد باب بيتك.
+</p>
+
+<div class="delivery-buttons">
+
+<a
+href="https://www.talabat.com/egypt"
+target="_blank"
+class="talabat">
+🛵 اطلب عبر طلبات
+</a>
+
+<a
+href="tel:19509"
+class="phone">
+☎️ 19509
+</a>
+
+</div>
+
+</section>
+
+
+<!-- BRANCHES -->
+
+<section id="branches" class="branches">
+
+<div class="section-title">
+
+<div class="red">
+OUR BRANCHES
+</div>
+
+<h2>
+فروع كرم الشام
+</h2>
+
+<p>
+اختار أقرب فرع ليك
+</p>
+
+</div>
+
+<div class="branch-grid">
+
+<div class="branch">
+<h3>📍 فيصل</h3>
+<p>شارع الملك فيصل — كفر طهرمس، الجيزة</p>
+</div>
+
+<div class="branch">
+<h3>📍 الدقي</h3>
+<p>الدقي — القاهرة</p>
+</div>
+
+<div class="branch">
+<h3>📍 المهندسين</h3>
+<p>المهندسين — الجيزة</p>
+</div>
+
+<div class="branch">
+<h3>📍 أكتوبر</h3>
+<p>6 أكتوبر — الجيزة</p>
+</div>
+
+<div class="branch">
+<h3>📍 وسط البلد</h3>
+<p>وسط البلد — القاهرة</p>
+</div>
+
+<div class="branch">
+<h3>📍 حلوان</h3>
+<p>حلوان — القاهرة</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SOCIAL -->
+
+<section id="contact">
+
+<div class="section-title">
+
+<div class="red">
+FOLLOW US
+</div>
+
+<h2>
+تابع كرم الشام
+</h2>
+
+<p>
+خليك دايمًا أول واحد يعرف العروض الجديدة
+</p>
+
+</div>
+
+<div class="social">
+
+<a
+class="social-card instagram"
+href="https://www.instagram.com/karamelshamfoods/"
+target="_blank">
+
+📸 Instagram
+<br>
+<small>@karamelshamfoods</small>
+
+</a>
+
+<a
+class="social-card facebook"
+href="https://www.facebook.com/"
+target="_blank">
+
+f Facebook
+<br>
+<small>Karam El Sham</small>
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<div class="logo" style="color:white">
+كرم الشام
+</div>
+
+<p>
+مذاق سوري أصيل،
+شاورما وبروستد ومشاوي وأكثر.
+</p>
+
+</div>
+
+<div>
+
+<h3>
+روابط سريعة
+</h3>
+
+<ul>
+
+<li>
+<a href="#menu">المنيو</a>
+</li>
+
+<li>
+<a href="#offers">العروض</a>
+</li>
+
+<li>
+<a href="#branches">الفروع</a>
+</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>
+تواصل معنا
+</h3>
+
+<p>☎️ 19509</p>
+<p>🛵 توصيل متاح</p>
+<p>📸 Instagram</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 Karam El Sham — Demo Website
+</div>
+
+</footer>
+
+
+<!-- CART -->
+
+<div class="cart-panel" id="cartPanel">
+
+<div class="cart-header">
+
+<h2>🛒 سلة الطلب</h2>
+
+<button class="close" onclick="toggleCart()">
+×
+</button>
+
+</div>
+
+<div class="cart-items" id="cartItems"></div>
+
+<div class="total">
+الإجمالي:
+<span id="total">
+0
+</span>
+جنيه
+</div>
+
+<button class="checkout" onclick="checkout()">
+إتمام الطلب
+</button>
+
+</div>
+
+
+<!-- CHAT BOT -->
+
+<div class="chat">
+
+<div class="chat-box" id="chatBox">
+
+<div class="chat-header">
+🤖 مساعد كرم الشام
+</div>
+
+<div class="chat-body">
+
+<div class="message">
+أهلًا بيك ❤️
+أنا مساعد كرم الشام.
+أقدر أساعدك تختار أكلك أو تعرف طرق الطلب.
+</div>
+
+<button
+class="chat-option"
+onclick="location.href='#menu'">
+🌯 شوف المنيو
+</button>
+
+<button
+class="chat-option"
+onclick="location.href='#offers'">
+🔥 شوف العروض
+</button>
+
+<button
+class="chat-option"
+onclick="window.open('https://www.talabat.com/egypt','_blank')">
+🛵 اطلب عبر طلبات
+</button>
+
+<button
+class="chat-option"
+onclick="location.href='tel:19509'">
+☎️ اتصل بـ 19509
+</button>
+
+</div>
+
+</div>
+
+<button
+class="chat-button"
+onclick="toggleChat()">
+💬
+</button>
+
+</div>
+
+
+<div class="toast" id="toast">
+تمت الإضافة للسلة ✓
+</div>
+
+
+<script>
+
+/* MENU DATA */
+
+const menu = [
+
+{
+name:"شاورما دجاج كبير",
+price:130,
+cat:"shawarma",
+desc:"شاورما دجاج بتتبيلة سورية وخبز طازج",
+img:"https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"شاورما لحم كبير",
+price:140,
+cat:"shawarma",
+desc:"شاورما لحم بطعم غني وتتبيلة مميزة",
+img:"https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"شاورما ميكس كبير",
+price:125,
+cat:"shawarma",
+desc:"ميكس شاورما دجاج ولحم",
+img:"https://images.unsplash.com/photo-1521305916504-4a1121188589?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"شاورما فرنساوي دجاج",
+price:125,
+cat:"shawarma",
+desc:"ساندوتش فرنساوي بصوصات كرم الشام",
+img:"https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"شاورما فرنساوي لحم",
+price:160,
+cat:"shawarma",
+desc:"شاورما لحم بطريقة فرنساوي",
+img:"https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"كايزر شاورما دجاج",
+price:80,
+cat:"shawarma",
+desc:"ساندوتش شاورما دجاج كايزر",
+img:"https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"كايزر شاورما لحم",
+price:100,
+cat:"shawarma",
+desc:"ساندوتش شاورما لحم كايزر",
+img:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"وجبة عربي دجاج",
+price:200,
+cat:"shawarma",
+desc:"وجبة عربي شاورما دجاج",
+img:"https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"وجبة عربي لحم",
+price:215,
+cat:"shawarma",
+desc:"وجبة عربي شاورما لحم",
+img:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"دبل دجاج",
+price:275,
+cat:"shawarma",
+desc:"وجبة دبل شاورما دجاج",
+img:"https://images.unsplash.com/photo-1521305916504-4a1121188589?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"ماريا دجاج",
+price:170,
+cat:"maria",
+desc:"ماريا دجاج بصوصات خاصة",
+img:"https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"ماريا لحم",
+price:195,
+cat:"maria",
+desc:"ماريا لحم غنية بالنكهة",
+img:"https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"ماريا ميكس",
+price:180,
+cat:"maria",
+desc:"ماريا ميكس دجاج ولحم",
+img:"https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"تشيزي ماريا",
+price:195,
+cat:"maria",
+desc:"ماريا مع الجبن والصوص",
+img:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"بروستد قطعتين Original",
+price:150,
+cat:"chicken",
+desc:"بروستد مقرمش مع الإضافات",
+img:"https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"بروستد قطعتين Spicy",
+price:150,
+cat:"chicken",
+desc:"بروستد سبايسي مقرمش",
+img:"https://images.unsplash.com/photo-1562967916-eb82221dfb92?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"كريب شاورما دجاج",
+price:110,
+cat:"crepe",
+desc:"كريب محشو بشاورما الدجاج",
+img:"https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"كريب شاورما لحم",
+price:130,
+cat:"crepe",
+desc:"كريب شاورما لحم وصوصات",
+img:"https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"كريب زينجر",
+price:120,
+cat:"crepe",
+desc:"كريب زينجر مقرمش",
+img:"https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"كريب بانيه كريسبي",
+price:120,
+cat:"crepe",
+desc:"بانيه كريسبي وصوصات",
+img:"https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"وجبة شيش وكفتة",
+price:190,
+cat:"grill",
+desc:"تشكيلة مشويات مع الإضافات",
+img:"https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"شيدر فرايز",
+price:70,
+cat:"sides",
+desc:"بطاطس مع صوص شيدر",
+img:"https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"بطاطس",
+price:35,
+cat:"sides",
+desc:"بطاطس مقرمشة",
+img:"https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"كولسلو",
+price:15,
+cat:"sides",
+desc:"كولسلو كريمي",
+img:"https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=85"
+}
+
+];
+
+
+/* OFFERS */
+
+const offers = [
+
+{
+name:"عالم الشاورما",
+price:575,
+desc:"تشكيلة ضخمة من الشاورما والماريا",
+img:"https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"عالم القرمشة",
+price:520,
+desc:"بروستد وكرسبي وبطاطس وصوصات",
+img:"https://images.unsplash.com/photo-1562967916-eb82221dfb92?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"عالم التندوري",
+price:680,
+desc:"كفتة وشيش وفرخة تندوري وأرز",
+img:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85"
+},
+
+{
+name:"عالم المشاوي",
+price:820,
+desc:"تشكيلة كبيرة من المشويات",
+img:"https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=85"
+}
+
+];
+
+
+/* PRODUCT CARD */
+
+function productCard(item){
+
+return `
+
+<div class="product">
+
+<div class="product-img">
+
+<img
+src="${item.img}"
+alt="${item.name}"
+loading="lazy"
+>
+
+<div class="product-badge">
+KARAM EL SHAM
+</div>
+
+</div>
+
+<div class="product-info">
+
+<h3>${item.name}</h3>
+
+<p>${item.desc}</p>
+
+<div class="price">
+${item.price} ج.م
+</div>
+
+<button
+class="add-btn"
+onclick="addToCart('${item.name}',${item.price})">
+
++ أضف للسلة
+
+</button>
+
+</div>
+
+</div>
+
+`;
+
+}
+
+
+/* RENDER */
+
+function renderMenu(category="all"){
+
+const grid=document.getElementById("menuGrid");
+
+grid.innerHTML=menu
+.filter(item=>category==="all" || item.cat===category)
+.map(productCard)
+.join("");
+
+}
+
+
+function renderOffers(){
+
+document.getElementById("offersGrid").innerHTML=
+offers.map(productCard).join("");
+
+}
+
+
+/* FILTER */
+
+function filterMenu(category,button){
+
+document
+.querySelectorAll(".filter")
+.forEach(b=>b.classList.remove("active"));
+
+button.classList.add("active");
+
+renderMenu(category);
+
+}
+
+
+/* CATEGORY CLICK */
+
+function scrollToMenu(category){
+
+document
+.getElementById("menu")
+.scrollIntoView({behavior:"smooth"});
+
+setTimeout(()=>{
+
+const button=[...document.querySelectorAll(".filter")]
+.find(x=>x.getAttribute("onclick")?.includes(`'${category}'`));
+
+if(button) filterMenu(category,button);
+
+},500);
+
+}
+
+
+/* CART */
+
+let cart=[];
+
+
+function addToCart(name,price){
+
+cart.push({
+name:name,
+price:price
+});
+
+renderCart();
+
+showToast();
+
+}
+
+
+function renderCart(){
+
+document.getElementById("cartCount").textContent=cart.length;
+
+const box=document.getElementById("cartItems");
+
+if(cart.length===0){
+
+box.innerHTML=
+`<p style="text-align:center;color:#888;margin-top:50px">
+السلة فاضية 😋
+</p>`;
+
+}else{
+
+box.innerHTML=cart.map((item,index)=>`
+
+<div class="cart-item">
+
+<div>
+
+<strong>${item.name}</strong>
+
+<br>
+
+<small>${item.price} ج.م</small>
+
+</div>
+
+<button
+class="remove"
+onclick="removeItem(${index})">
+
+حذف
+
+</button>
+
+</div>
+
+`).join("");
+
+}
+
+document.getElementById("total").textContent=
+cart.reduce((sum,item)=>sum+item.price,0);
+
+}
+
+
+function removeItem(index){
+
+cart.splice(index,1);
+
+renderCart();
+
+}
+
+
+function toggleCart(){
+
+document
+.getElementById("cartPanel")
+.classList.toggle("open");
+
+}
+
+
+/* CHECKOUT */
+
+function checkout(){
+
+if(cart.length===0){
+
+alert("أضف منتجات للسلة أولًا ❤️");
+
+return;
+
+}
+
+let order=cart
+.map(x=>`${x.name} - ${x.price} جنيه`)
+.join("\n");
+
+let total=cart
+.reduce((s,x)=>s+x.price,0);
+
+alert(
+"طلبك:\n\n"+
+order+
+"\n\nالإجمالي: "+
+total+
+" جنيه\n\n"+
+"في النسخة الحقيقية يمكن ربط الطلب مباشرة بواتساب أو نظام الطلب."
+);
+
+}
+
+
+/* TOAST */
+
+function showToast(){
+
+const toast=document.getElementById("toast");
+
+toast.classList.add("show");
+
+setTimeout(()=>{
+
+toast.classList.remove("show");
+
+},1500);
+
+}
+
+
+/* CHAT */
+
+function toggleChat(){
+
+const chat=document.getElementById("chatBox");
+
+chat.style.display=
+chat.style.display==="block"
+?"none"
+:"block";
+
+}
+
+
+/* LANGUAGE DEMO */
+
+function toggleLanguage(){
+
+alert(
+"English version is ready to be connected to the full bilingual content."
+);
+
+}
+
+
+/* START */
+
+renderMenu();
+
+renderOffers();
+
+renderCart();
+
+</script>
+
+</body>
+</html>
